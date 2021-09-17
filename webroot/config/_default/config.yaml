@@ -35,95 +35,132 @@ params:
       name: "Activity Streams 2.0"
       uri: "https://www.w3.org/ns/activitystreams"
   actors:
-    generic-actor:
+    generic-person:
       "id": "https://orcid.org/0000-0002-1825-0097"
       name: "Josiah Carberry"
       "type": "Person"
-      "inbox": "https://josiahcarberry.com/ldn/inbox"
     author:
       "id": "https://orcid.org/0000-0002-1825-0097"
       name: "Josiah Carberry"
       "type": "Person"
-      "inbox": "https://josiahcarberry.com/ldn/inbox"
     reviewer:
       "id": "https://isni.org/isni/0000000122832703"
       name: "H G Wells"
       "type": "Person"
-      "inbox": "https://hgwells.com/ldn/inbox"
-  systems:
-    generic-origin-system:
-      "id": "https://origin-system.org"
+    reviewer-2:
+      "id": "https://isni:org/isni/00000001214005623"
+      name: "Jules Verne"
+      "type": "Person"
+    generic-organisation:
+      "id": "https://some-organisation.org"
+      name: "Some Organisation"
+      "type": "Organization"
+    research-organisation:
+      "id": "https://research-organisation.org"
+      name: "Research Organisation"
+      "type": "Organization"
+    generic-service:
+      "id": "https://generic-service.com"
+      name: "Generic Service"
       "type": "Service"
-      "inbox": "https://origin-system.org/inbox/"
-    generic-target-system:
-      "id": "https://target-system.org"
-      "type": "Service"
-      "inbox": "https://target-system.org/inbox/"
-    repository:
-      "id": "https://repository.org"
-      "type": "Service"
-      "inbox": "https://repository.org/inbox/"
     review-service:
-      "id": "https://reviewservice.org"
+      "id": "https://review-service.com"
+      name: "Review Service"
       "type": "Service"
-      "inbox": "https://reviewservice.org/requests/inbox/"
+    endorsement-service:
+      "id": "https://endorsement-service.com"
+      name: "Endorsement Service"
+      "type": "Service"
     overlay-journal:
-      "id": "https://overlay-journal.org"
+      "id": "https://overlay-journal.com"
+      name: "Overlay Journal"
       "type": "Service"
-      "inbox": "https://overlay-journal.org/requests/inbox/"
     aggregation-service:
       "id": "https://aggregator-service.org"
+      name: "Aggregation Service"
       "type": "Service"
-      "inbox": "https://aggregator-service.org/requests/inbox/"
+  systems:
+    generic-organisation:
+      "id": "https://some-organisation.org/system"
+      "type": "Service"
+      "inbox": "https://some-organisation.org/system/inbox/"
+    generic-service:
+      "id": "https://generic-service.com/system"
+      "type": "Service"
+      "inbox": "https://generic-service.com/system/inbox/"
+#    generic-origin-system:
+#      "id": "https://origin-system.org"
+#      "type": "Service"
+#      "inbox": "https://origin-system.org/inbox/"
+#    generic-target-system:
+#      "id": "https://target-system.org"
+#      "type": "Service"
+#      "inbox": "https://target-system.org/inbox/"
+    repository:
+      "id": "https://research-organisation.org/repository"
+      "type": "Service"
+      "inbox": "https://research-organisation.org/repository/inbox/"
+    review-service:
+      "id": "https://review-service.com/system"
+      "type": "Service"
+      "inbox": "https://review-service.com/system/inbox/"
+    overlay-journal:
+      "id": "https://overlay-journal.com/system"
+      "type": "Service"
+      "inbox": "https://overlay-journal.com/system/inbox/"
+    aggregation-service:
+      "id": "https://aggregator-service.org/system"
+      "type": "Service"
+      "inbox": "https://aggregator-service.org/system/requests/inbox/"
   objects: # also used for 'context' since the context is always something that may have been used as an object in these docs.
     generic-object-repository:
-      "id": "https://repository.org/resource/0021"
+      "id": "https://some-organisation.org/resource/0021"
       "type": "Document"
       "ietf:cite-as": "https://doi.org/10.4598/12123487"
     generic-object-service:
-      "id": "https://service.org/resource/1234"
+      "id": "https://generic-service.com/resource/1234"
       "type": "Document"
       "ietf:cite-as": "https://doi.org/10.9357/123003"
     preprint:
-      "id": "https://repository.org/preprint/201203/421/"
+      "id": "https://research-organisation.org/repository/preprint/201203/421/"
       "type": "sorg:AboutPage"
       "ietf:cite-as": "https://doi.org/10.5555/12345680"
       url:
-        "id": "https://repository.org/preprint/201203/421/content.pdf"
+        "id": "https://research-organisation.org/repository/preprint/201203/421/content.pdf"
         "type": [ "Article","sorg:ScholarlyArticle" ]
         "media-type": "application/pdf"
     submission:
-      "id": "https://overlay-journal.org/submissions/00001/"
+      "id": "https://overlay-journal.com/submissions/00001/"
       "type": "sorg:AboutPage"
       url:
-        "id": "https://overlay-journal.org/submissions/00001/files/content.pdf"
+        "id": "https://overlay-journal.com/submissions/00001/files/content.pdf"
         "type": [ "Article","sorg:ScholarlyArticle" ]
         "media-type": "application/pdf"
     review:
-      "id": "https://reviewservice.org/review/geo/202103/0021"
+      "id": "https://review-service.com/review/geo/202103/0021"
       "type": [ "Document","sorg:Review" ]
       "ietf:cite-as": "https://doi.org/10.3214/987654"
 #      "coar-notify:reviews":
 #        "id": "https://repository.org/preprint/201203/421/"
 #        "ietf:cite-as": "https://doi.org/10.5555/12345680"
     "journal-review":
-      "id": "https://overlay-journal.org/reviews/000001/00001"
+      "id": "https://overlay-journal.com/reviews/000001/00001"
       "type": [ "Document","sorg:Review" ]
       "ietf:cite-as": "https://doi.org/10.3214/987654"
 #      "coar-notify:reviews":
 #        "id": "https://repository.org/preprint/201203/421/"
 #        "ietf:cite-as": "https://doi.org/10.5555/12345680"
     "repository-review":
-      "id": "https://repository.org/review/00001"
+      "id": "https://research-organisation.org/repository/review/00001"
       "type": [ "Document","sorg:Review" ]
       "ietf:cite-as": "https://doi.org/10.3214/000001"
 #      "coar-notify:reviews":
 #        "id": "https://repository.org/preprint/201203/421/"
 #        "ietf:cite-as": "https://doi.org/10.5555/12345680"
     endorsement:
-      "id": "https://overlay-journal.org/articles/00001/"
+      "id": "https://overlay-journal.com/articles/00001/"
       "type": [ "Page","sorg:WebPage" ]
-      "ietf:cite-as": "https://overlay-journal.org/articles/00001/"
+      "ietf:cite-as": "https://overlay-journal.com/articles/00001/"
 #      "coar-notify:endorses":
 #        "id": "https://repository.org/preprint/201203/421/"
 #        "ietf:cite-as": "https://doi.org/10.5555/12345680"

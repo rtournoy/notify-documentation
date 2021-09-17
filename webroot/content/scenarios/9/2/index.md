@@ -9,6 +9,8 @@ payload:
     "@context": ["sorg","ldp","ietf","nat"]
     id: "urn:uuid:0370c0fb-bb78-4a9b-87f5-bed307a509dd"
     type: ["Offer","coar-notify:ReviewAction"]
+    actor:
+        lookup: author
     origin:
         lookup: repository
     target:
@@ -17,7 +19,6 @@ payload:
         lookup: preprint
     actor:
         lookup: author
-        obligation: MUST
 ---
 
 

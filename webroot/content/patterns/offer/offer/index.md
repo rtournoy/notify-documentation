@@ -8,12 +8,11 @@ payload:
     id: "urn:uuid:0370c0fb-bb78-4a9b-87f5-bed307a509dd"
     type: "Offer"
     origin:
-        lookup: "generic-origin-system"
+        lookup: "generic-organisation"
     target:
-        lookup: "generic-target-system"
+        lookup: "generic-service"
     object:
         lookup: "generic-object-repository"
     actor:
-        lookup: "generic-actor"
-        obligation: may
+        lookup: "generic-person"
 ---

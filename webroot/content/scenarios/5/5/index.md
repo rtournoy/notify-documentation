@@ -20,5 +20,9 @@ payload:
         type: ["Offer","coar-notify:ReviewAction"]
         object:
             lookup: preprint
+    context:
+        lookup: preprint
+    actor:
+        lookup: review-service
 ---
 

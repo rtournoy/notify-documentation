@@ -8,10 +8,12 @@ weight: 2
 payload:
     id: "urn:uuid:94ecae35-dcfd-4182-8550-22c7164fe23f"
     type: "Announce"
+    actor:
+        lookup: "generic-service"
     origin:
-        lookup: "generic-origin-system"
+        lookup: "generic-service"
     target:
-        lookup: "generic-target-system"
+        lookup: "generic-organisation"
     object:
         lookup: generic-object-service
     context:

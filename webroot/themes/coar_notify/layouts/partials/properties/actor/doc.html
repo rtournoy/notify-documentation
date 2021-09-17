@@ -3,13 +3,12 @@
 {{ $actorType := index $siteParams.actors $thisPayload.actor.lookup }}
 
 #### `actor`
-The `activity` {{ $thisPayload.actor.obligation | default "may" }}  have an `actor` describing the party responsible for initiating this `activity`. The `actor`:
-* has an `id` which must be an HTTP URI identifying the {{ $thisPayload.actor.lookup }}.
-* has a `type` which should include *{{ $actorType.type }}* from AS 2.0.
-* may have an `inbox` which must be an HTTP URI
+The `activity` {{ $thisPayload.actor.obligation | default "should" }}  have an `actor` describing the party responsible for initiating this `activity`. The `actor`:
+* has an `id` which must be an HTTP URI.
+* has a `type` which should be one of: *Application*, *Group*, *Organization*, *Person* or *Service* from AS 2.0.
 * may have a name
 
-{{/*{{ if ne $thisPayload.actor.lookup "generic-actor" }}*/}}
+{{/*{{ if ne $thisPayload.actor.lookup "generic-person" }}*/}}
 {{/*The `activity` {{ $thisPayload.actor.obligation | default "may" }}  have an `actor` describing the {{ $thisPayload.actor.lookup }}. The `actor`:*/}}
 {{/** has an `id` which must be an HTTP URI identifying the {{ $thisPayload.actor.lookup }}.*/}}
 {{/** has a `type` which should include *{{ $actorType.type }}* from AS 2.0.*/}}

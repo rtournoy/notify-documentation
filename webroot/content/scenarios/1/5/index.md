@@ -15,6 +15,9 @@ payload:
         lookup: repository
     object:
         lookup: endorsement
-    actor: ""
+    actor:
+        lookup: overlay-journal
+    context:
+        lookup: preprint
 ---
 
