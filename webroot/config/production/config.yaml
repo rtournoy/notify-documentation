@@ -1,5 +1,5 @@
-#baseURL: "https://notify.coar-repositories.org"
-baseURL: "https://notifydocs.antleaf.com"
+baseURL: "https://notify.coar-repositories.org"
+#baseURL: "https://notifydocs.antleaf.com"
 buildDrafts: false
 googleAnalytics: ""
 params:
