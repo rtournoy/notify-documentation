@@ -19,6 +19,6 @@ notification patterns:
   * **`target`:** The intended destination of the activity, typically the service which *consumes* the notification.
   * **`object`:** This should be the focus of the activity. Other object properties may appear in notifications, as properties of other properties.
 * **The `activity`** property may (and often will) contain the following properties:
-    * **`actor`:** Sometimes it is useful to identify the party or process that initiated the activity, in which case this initiator should be expressed as an `actor`.
+    * **`actor`:** This identifies the party or process that initiated the activity.
 
 The following notification patterns are defined to be widely reusable. Their re-use is illustrated in the [example scenarios](/scenarios/).
